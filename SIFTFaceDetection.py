@@ -1,11 +1,15 @@
+# Code from https://www.analyticsvidhya.com/blog/2019/03/opencv-functions-computer-vision-python/
+
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+# face, eye, and eye+glasses data files from openCV.
+face_cascade = cv2.CascadeClassifier(
+    './data/haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('./data/haarcascade_eye.xml')
 eyeglasses_cascade = cv2.CascadeClassifier(
-    'haarcascade_eye_tree_eyeglasses.xml')
+    './data/haarcascade_eye_tree_eyeglasses.xml')
 
 # read the image and convert to grayscale format
 img = cv2.imread('FILE NAME HERE.jpg')

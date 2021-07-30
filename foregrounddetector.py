@@ -1,13 +1,13 @@
+# Code taken from https://www.geeksforgeeks.org/python-foreground-extraction-in-an-image-using-grabcut-algorithm/
+
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
-# path to input image specified and
-# image is loaded with imread command
-image = cv2.imread('ForegroundImageTest.jpg')
+# reads and loads the image
+image = cv2.imread('FILE NAME HERE.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-plt.imshow(image)
-plt.show()
+
 # create a simple mask image similar
 # to the loaded image, with the
 # shape and return type
@@ -20,12 +20,9 @@ mask = np.zeros(image.shape[:2], np.uint8)
 backgroundModel = np.zeros((1, 65), np.float64)
 foregroundModel = np.zeros((1, 65), np.float64)
 
-# define the Region of Interest (ROI)
-# as the coordinates of the rectangle
+# USER MUST MANUALLY SPECIFY REGION OF INTEREST
 # where the values are entered as
 # (startingPoint_x, startingPoint_y, width, height)
-# these coordinates are according to the input image
-# it may vary for different images
 rectangle = (500, 100, 650, 830)
 
 # apply the grabcut algorithm with appropriate
