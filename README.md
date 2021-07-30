@@ -13,6 +13,6 @@ Facial Recognition:
 ![image](./images/FR4.png)
 
 Foreground Processing:  
-![iamge](./images/FR1.png)
+![image](./images/FR1.png)
 
 Note: Both programs only work on certain images I tried, possibly due to lighting, angle, or other features of the image.
